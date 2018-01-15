@@ -206,6 +206,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
       
       $(document).on('keyup', self.onKeyUp);
       $(document).on('keydown', self.onKeyDown);
+	
       
       var track = tracks[self.trackIndex];
       
