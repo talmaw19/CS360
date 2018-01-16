@@ -289,15 +289,14 @@ OverDrive.Stages.InputConfirm = (function(stage, canvas, context) {
         window.requestAnimationFrame(self.player2Confirm);
       }
     }
-    
+    var lev =0;
     this.player2PostConfirm = function() {
       
       console.log('player 2 selected');
-      
+      lev = lev +1;
       self.leaveState.id = 'mainGame';
       self.leaveState.params = {
-        level : 1
-      };
+        level : lev      };
       
       window.requestAnimationFrame(self.leaveStage);
     }

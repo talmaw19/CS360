@@ -171,10 +171,10 @@ OverDrive.Stages.MainMenu = (function(stage, canvas, context) {
       // Setup leave state parameters and target - this is explicit!
       self.leaveState.id = self.menuOptions[self.selectedOption].target;
       self.leaveState.params = { backgroundImage : self.backgroundImage }; // params setup as required by target state
-      
+       
       if (self.leaveState.id == 'mainGame') {
         
-        self.leaveState.params.level = 1; // Initialise level
+        self.leaveState.params.level =  self.leaveState.params.level + 1; // Initialise level
       }
       
       var target = self.transitionLinks[self.leaveState.id];

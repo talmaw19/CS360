@@ -151,7 +151,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
 
     
     // Main game-state specific variables
-    this.level = 1;
+    this.level = 0;
     this.trackIndex = 0;
     
     this.backgroundImage = null;
