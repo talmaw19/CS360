@@ -312,7 +312,35 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
       
       self.pickupTypes['points_pickup'] = new OverDrive.Pickup.PickupType(
       {
-        spriteURI : 'Assets//Images//coin1.png',
+        spriteURI : 'Assets//Images//Coconut.png',
+        collisionGroup : 0,
+        handler : function(collector) {
+        
+          collector.addPoints(7);
+        }
+      } );
+      
+      self.pickupTypes['points_pickup2'] = new OverDrive.Pickup.PickupType(
+      {
+        spriteURI : 'Assets//Images//Milk.png',
+        collisionGroup : 0,
+        handler : function(collector) {
+        
+          collector.addPoints(-20);
+        }
+      } );
+	  self.pickupTypes['points_pickup3'] = new OverDrive.Pickup.PickupType(
+      {
+        spriteURI : 'Assets//Images//Banana.png',
+        collisionGroup : 0,
+        handler : function(collector) {
+        
+          collector.addPoints(Math.floor(-100);
+        }
+      } );
+	   self.pickupTypes['points_pickup4'] = new OverDrive.Pickup.PickupType(
+      {
+        spriteURI : 'Assets//Images//Pineapple.png',
         collisionGroup : 0,
         handler : function(collector) {
         
@@ -320,15 +348,6 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
         }
       } );
       
-      self.pickupTypes['points_pickup2'] = new OverDrive.Pickup.PickupType(
-      {
-        spriteURI : 'Assets//Images//coin2.png',
-        collisionGroup : 0,
-        handler : function(collector) {
-        
-          collector.addPoints(50);
-        }
-      } );
       
       
       self.countDownSecondsElapsed = 0;
