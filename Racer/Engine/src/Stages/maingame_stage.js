@@ -578,7 +578,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
     
     
     this.updatePlayer1 = function(player, deltaTime, env) {
-      if(player.score == 100)
+      if(player.score >= 300)
 	  {
 			this.player1CrossedFinishLine();
 	  }
@@ -636,7 +636,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
 
 
     this.updatePlayer2 = function(player, deltaTime, env) {
-      if(player.score == 100)
+      if(player.score >= 300)
 	  {	
 			this.player2CrossedFinishLine();
 	  }
