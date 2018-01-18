@@ -113,7 +113,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
   let scenery = OverDrive.Game.scenery;
   
   
-  let lapsToWin = 1;
+  let lapsToWin = 10;
   
   
   //
@@ -578,7 +578,10 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
     
     
     this.updatePlayer1 = function(player, deltaTime, env) {
-      
+      if(player.score == 100)
+	  {
+			this.player1CrossedFinishLine();
+	  }
       // Limit player velocity
       if (player.mBody.speed > player_top_speed) {
         
@@ -633,7 +636,11 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
 
 
     this.updatePlayer2 = function(player, deltaTime, env) {
-      
+      if(player.score == 100)
+	  {	
+			this.player2CrossedFinishLine();
+	  }
+	  else{
       // Limit player velocity
       if (player.mBody.speed > player_top_speed) {
         
@@ -682,6 +689,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
           //player.rotate(Math.PI * player.rotateSpeed);
         }
       }
+	  }
     }
     
     
