@@ -80,7 +80,7 @@ OverDrive.Game = (function(gamelib, canvas, context) {
   gamelib.drawHUD = function(player1, player2, showActualTime, elapsedSeconds, maxLaps) {
 
     // Draw HUD
-    context.fillStyle = '#FFF';
+    context.fillStyle = '#000';
     context.font = '30pt Amatic SC';
     //context.font = '30pt Faster One';
     
@@ -94,10 +94,10 @@ OverDrive.Game = (function(gamelib, canvas, context) {
     context.font = '24px Amatic SC';
     
     var textMetrics = context.measureText('Points: ' + player1.score);
-    context.fillText('Points: ' + player1.score, canvas.width * 0.2 - textMetrics.width / 2, 110);
+    context.fillText('Points: ' + player1.score, canvas.width * 0.2 - textMetrics.width / 2, 80);
     
     var textMetrics = context.measureText('Points: ' + player2.score);
-    context.fillText('Points: ' + player2.score, canvas.width * 0.8 - textMetrics.width / 2, 110);
+    context.fillText('Points: ' + player2.score, canvas.width * 0.8 - textMetrics.width / 2, 80);
     
    /* 
     var p1Lap = Math.min(player1.pathLocation.currentIteration + 1, maxLaps);
@@ -130,8 +130,8 @@ OverDrive.Game = (function(gamelib, canvas, context) {
     
     context.font = '30pt Amatic SC';
     
-    var textMetrics = context.measureText(clockString);
-    context.fillText(clockString, canvas.width * 0.5 - textMetrics.width / 2, 50);
+   //var textMetrics = context.measureText(clockString);
+    //context.fillText(clockString, canvas.width * 0.5 - textMetrics.width / 2, 50);
     
   }
 
