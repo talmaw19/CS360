@@ -103,12 +103,12 @@ OverDrive.Game = (function(gamelib, canvas, context) {
     var p1Lap = Math.min(player1.pathLocation.currentIteration + 1, maxLaps);
     var p2Lap = Math.min(player2.pathLocation.currentIteration + 1, maxLaps);
     
-    var textMetrics = context.measureText('Lap: ' + p1Lap);
+    /*var textMetrics = context.measureText('Lap: ' + p1Lap);
     context.fillText('Lap: ' + p1Lap, canvas.width * 0.2 - textMetrics.width / 2, 80);
     
     var textMetrics = context.measureText('Lap: ' + p2Lap);
     context.fillText('Lap: ' + p2Lap, canvas.width * 0.8 - textMetrics.width / 2, 80);
-    
+    */
     // Draw main clock
     
     var clockString;

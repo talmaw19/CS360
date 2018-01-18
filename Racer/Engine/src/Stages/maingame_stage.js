@@ -326,7 +326,7 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
         collisionGroup : 0,
         handler : function(collector) {
         
-          collector.addPoints(-20);
+          collector.addPoints(25);
         }
       } );
 	  self.pickupTypes['points_pickup3'] = new OverDrive.Pickup.PickupType(
