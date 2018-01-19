@@ -347,6 +347,22 @@ OverDrive.Stages.MainGame = (function(stage, canvas, context) {
           collector.addPoints(50);
         }
       } );
+	   self.pickupTypes['points_pickup5'] = new OverDrive.Pickup.PickupType(
+	   {
+		 spriteURI : 'Assets//Images//Kristens_Face.fw.png',
+		 collisionGroup : 0,
+		 handler : function(collector) {
+			 collector.addPoints(100);
+		 }
+	   });
+	   self.pickupTypes['points_pickup6'] = new OverDrive.Pickup.PickupType(
+	   {
+		 spriteURI : 'Assets//Images//Tersa.fw.png',
+		 collisionGroup : 0,
+		 handler : function(collector) {
+			 collector.addPoints(-100);
+		 }
+	   });
       
       
       
